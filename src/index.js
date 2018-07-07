@@ -3,4 +3,10 @@ import ReactDOM from 'react-dom'
 import Root from 'Root'
 import App from 'components/App'
 
-ReactDOM.render(<Root><App/></Root>, document.querySelector('#root'))
+const appRoot = (
+  <Root>
+    <App/>
+  </Root>
+)
+
+ReactDOM.render(appRoot, document.querySelector('#root'))
