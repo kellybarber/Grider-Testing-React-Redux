@@ -1,5 +1,6 @@
 import { SAVE_COMMENT } from 'actions/types'
 
-export function saveComment(comment) {
-  return { type: SAVE_COMMENT, comment }
-}
+export const saveComment = comment => ({ 
+  type: SAVE_COMMENT, 
+  comment 
+})

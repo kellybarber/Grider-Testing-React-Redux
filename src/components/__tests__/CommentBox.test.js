@@ -21,9 +21,7 @@ it('has a text area and a button', () => {
 describe('the textarea', () => {
 
   beforeEach(() => {
-    wrapped.find('textarea').simulate('change', {
-      target: { value: 'comment' }
-    })
+    wrapped.find('textarea').simulate('change', { target: { value: 'comment' } })
     wrapped.update()
   })
 
