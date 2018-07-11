@@ -16,13 +16,6 @@ afterEach(() => {
   moxios.uninstall()
 })
 
-const makeRequest = () => {
-  moxios.stubRequest('http://jsonplaceholder.typicode.com/comments', {
-    status: 200,
-    response: [{ name: 'Fetched #1' }, { name: 'Fetched #2' }]
-  })
-}
-
 it('can fetch a list of comments and display them', (done) => {
   const wrapped = mount(
     <Root>
@@ -37,7 +30,7 @@ it('can fetch a list of comments and display them', (done) => {
 
     expect(wrapped.find('li').length).toEqual(2)
     done()
-    
+
     wrapped.unmount()
   })
 })
