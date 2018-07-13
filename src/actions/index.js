@@ -12,6 +12,7 @@ export const saveComment = comment => ({
 
 export const fetchComments = async () => {
   const response = await axios.get('http://jsonplaceholder.typicode.com/comments')
+
   return {
     type: FETCH_COMMENTS,
     response
