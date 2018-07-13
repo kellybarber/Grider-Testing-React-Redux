@@ -7,19 +7,19 @@ import {
 
 export const saveComment = comment => ({ 
   type: SAVE_COMMENT, 
-  comment 
+  payload: comment 
 })
 
-export const fetchComments = async () => {
-  const response = await axios.get('http://jsonplaceholder.typicode.com/comments')
+export const fetchComments = () => {
+  const response = axios.get('http://jsonplaceholder.typicode.com/comments')
 
   return {
     type: FETCH_COMMENTS,
-    response
+    payload: response
   }
 }
 
 export const changeAuth = isLoggedIn => ({
   type: CHANGE_AUTH,
-  isLoggedIn
+  payload: isLoggedIn
 })

@@ -1,11 +1,13 @@
 import { SAVE_COMMENT, FETCH_COMMENTS } from 'actions/types'
 
 export default (state=[], action) => {
-  switch(action.type) {
+  const { type, payload } = action
+
+  switch(type) {
     case SAVE_COMMENT:
-      return [ ...state, action.comment ]
+      return [ ...state, payload ]
     case FETCH_COMMENTS:
-      const comments = action.response.data.map(comment => comment.name)
+      const comments = payload.data.map(comment => comment.name)
       return [ ...state, ...comments ]
     default:
       return state

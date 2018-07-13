@@ -1,9 +1,11 @@
 import { CHANGE_AUTH } from 'actions/types'
 
 export default (state=false, action) => {
-  switch (action.type) {
+  const { type, payload } = action
+
+  switch (type) {
     case CHANGE_AUTH: 
-      return action.isLoggedIn
+      return payload
     default: 
       return state
   }
