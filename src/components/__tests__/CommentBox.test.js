@@ -1,6 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import Root from 'Root'
+import requireAuth from 'components/requireAuth'
 import CommentBox from 'components/CommentBox'
 
 let wrapped
